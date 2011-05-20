@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		872DF3B2138625BD00CD0972 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DF3B1138625BD00CD0972 /* UIKit.framework */; };
+		872DF3B4138625BD00CD0972 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DF3B3138625BD00CD0972 /* Foundation.framework */; };
+		872DF3B6138625BD00CD0972 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DF3B5138625BD00CD0972 /* CoreGraphics.framework */; };
+		872DF3BC138625BD00CD0972 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 872DF3BA138625BD00CD0972 /* InfoPlist.strings */; };
+		872DF3BF138625BD00CD0972 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 872DF3BE138625BD00CD0972 /* main.m */; };
+		872DF3C2138625BD00CD0972 /* FadeinTransitionAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 872DF3C1138625BD00CD0972 /* FadeinTransitionAppDelegate.m */; };
+		872DF3C5138625BD00CD0972 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 872DF3C3138625BD00CD0972 /* MainWindow.xib */; };
+		872DF3C8138625BD00CD0972 /* FadeinTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872DF3C7138625BD00CD0972 /* FadeinTransitionViewController.m */; };
+		872DF3CB138625BD00CD0972 /* FadeinTransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 872DF3C9138625BD00CD0972 /* FadeinTransitionViewController.xib */; };
+		872DF3D6138627C600CD0972 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 872DF3D2138627C600CD0972 /* background.png */; };
+		872DF3D7138627C600CD0972 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 872DF3D3138627C600CD0972 /* background@2x.png */; };
+		872DF3D8138627C600CD0972 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 872DF3D4138627C600CD0972 /* Default.png */; };
+		872DF3D9138627C600CD0972 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 872DF3D5138627C600CD0972 /* Default@2x.png */; };
+		872DF3E713862F0A00CD0972 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872DF3E613862F0A00CD0972 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		872DF3AD138625BC00CD0972 /* FadeinTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FadeinTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		872DF3B1138625BD00CD0972 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		872DF3B3138625BD00CD0972 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		872DF3B5138625BD00CD0972 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		872DF3B9138625BD00CD0972 /* FadeinTransition-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FadeinTransition-Info.plist"; sourceTree = "<group>"; };
+		872DF3BB138625BD00CD0972 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		872DF3BD138625BD00CD0972 /* FadeinTransition-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FadeinTransition-Prefix.pch"; sourceTree = "<group>"; };
+		872DF3BE138625BD00CD0972 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		872DF3C0138625BD00CD0972 /* FadeinTransitionAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FadeinTransitionAppDelegate.h; sourceTree = "<group>"; };
+		872DF3C1138625BD00CD0972 /* FadeinTransitionAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FadeinTransitionAppDelegate.m; sourceTree = "<group>"; };
+		872DF3C4138625BD00CD0972 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		872DF3C6138625BD00CD0972 /* FadeinTransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FadeinTransitionViewController.h; sourceTree = "<group>"; };
+		872DF3C7138625BD00CD0972 /* FadeinTransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FadeinTransitionViewController.m; sourceTree = "<group>"; };
+		872DF3CA138625BD00CD0972 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FadeinTransitionViewController.xib; sourceTree = "<group>"; };
+		872DF3D2138627C600CD0972 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		872DF3D3138627C600CD0972 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		872DF3D4138627C600CD0972 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		872DF3D5138627C600CD0972 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		872DF3E613862F0A00CD0972 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		872DF3AA138625BC00CD0972 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				872DF3E713862F0A00CD0972 /* QuartzCore.framework in Frameworks */,
+				872DF3B2138625BD00CD0972 /* UIKit.framework in Frameworks */,
+				872DF3B4138625BD00CD0972 /* Foundation.framework in Frameworks */,
+				872DF3B6138625BD00CD0972 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		872DF3A2138625BC00CD0972 = {
+			isa = PBXGroup;
+			children = (
+				872DF3B7138625BD00CD0972 /* FadeinTransition */,
+				872DF3B0138625BD00CD0972 /* Frameworks */,
+				872DF3AE138625BC00CD0972 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		872DF3AE138625BC00CD0972 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				872DF3AD138625BC00CD0972 /* FadeinTransition.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		872DF3B0138625BD00CD0972 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				872DF3E613862F0A00CD0972 /* QuartzCore.framework */,
+				872DF3B1138625BD00CD0972 /* UIKit.framework */,
+				872DF3B3138625BD00CD0972 /* Foundation.framework */,
+				872DF3B5138625BD00CD0972 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		872DF3B7138625BD00CD0972 /* FadeinTransition */ = {
+			isa = PBXGroup;
+			children = (
+				872DF3D11386262600CD0972 /* Resources */,
+				872DF3C0138625BD00CD0972 /* FadeinTransitionAppDelegate.h */,
+				872DF3C1138625BD00CD0972 /* FadeinTransitionAppDelegate.m */,
+				872DF3C3138625BD00CD0972 /* MainWindow.xib */,
+				872DF3C6138625BD00CD0972 /* FadeinTransitionViewController.h */,
+				872DF3C7138625BD00CD0972 /* FadeinTransitionViewController.m */,
+				872DF3C9138625BD00CD0972 /* FadeinTransitionViewController.xib */,
+				872DF3B8138625BD00CD0972 /* Supporting Files */,
+			);
+			path = FadeinTransition;
+			sourceTree = "<group>";
+		};
+		872DF3B8138625BD00CD0972 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				872DF3B9138625BD00CD0972 /* FadeinTransition-Info.plist */,
+				872DF3BA138625BD00CD0972 /* InfoPlist.strings */,
+				872DF3BD138625BD00CD0972 /* FadeinTransition-Prefix.pch */,
+				872DF3BE138625BD00CD0972 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		872DF3D11386262600CD0972 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				872DF3D2138627C600CD0972 /* background.png */,
+				872DF3D3138627C600CD0972 /* background@2x.png */,
+				872DF3D4138627C600CD0972 /* Default.png */,
+				872DF3D5138627C600CD0972 /* Default@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		872DF3AC138625BC00CD0972 /* FadeinTransition */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 872DF3CE138625BD00CD0972 /* Build configuration list for PBXNativeTarget "FadeinTransition" */;
+			buildPhases = (
+				872DF3A9138625BC00CD0972 /* Sources */,
+				872DF3AA138625BC00CD0972 /* Frameworks */,
+				872DF3AB138625BC00CD0972 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FadeinTransition;
+			productName = FadeinTransition;
+			productReference = 872DF3AD138625BC00CD0972 /* FadeinTransition.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		872DF3A4138625BC00CD0972 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "いります電算企画";
+			};
+			buildConfigurationList = 872DF3A7138625BC00CD0972 /* Build configuration list for PBXProject "FadeinTransition" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 872DF3A2138625BC00CD0972;
+			productRefGroup = 872DF3AE138625BC00CD0972 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				872DF3AC138625BC00CD0972 /* FadeinTransition */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		872DF3AB138625BC00CD0972 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				872DF3BC138625BD00CD0972 /* InfoPlist.strings in Resources */,
+				872DF3C5138625BD00CD0972 /* MainWindow.xib in Resources */,
+				872DF3CB138625BD00CD0972 /* FadeinTransitionViewController.xib in Resources */,
+				872DF3D6138627C600CD0972 /* background.png in Resources */,
+				872DF3D7138627C600CD0972 /* background@2x.png in Resources */,
+				872DF3D8138627C600CD0972 /* Default.png in Resources */,
+				872DF3D9138627C600CD0972 /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		872DF3A9138625BC00CD0972 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				872DF3BF138625BD00CD0972 /* main.m in Sources */,
+				872DF3C2138625BD00CD0972 /* FadeinTransitionAppDelegate.m in Sources */,
+				872DF3C8138625BD00CD0972 /* FadeinTransitionViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		872DF3BA138625BD00CD0972 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				872DF3BB138625BD00CD0972 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		872DF3C3138625BD00CD0972 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				872DF3C4138625BD00CD0972 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		872DF3C9138625BD00CD0972 /* FadeinTransitionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				872DF3CA138625BD00CD0972 /* en */,
+			);
+			name = FadeinTransitionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		872DF3CC138625BD00CD0972 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		872DF3CD138625BD00CD0972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		872DF3CF138625BD00CD0972 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FadeinTransition/FadeinTransition-Prefix.pch";
+				INFOPLIST_FILE = "FadeinTransition/FadeinTransition-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		872DF3D0138625BD00CD0972 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FadeinTransition/FadeinTransition-Prefix.pch";
+				INFOPLIST_FILE = "FadeinTransition/FadeinTransition-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		872DF3A7138625BC00CD0972 /* Build configuration list for PBXProject "FadeinTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				872DF3CC138625BD00CD0972 /* Debug */,
+				872DF3CD138625BD00CD0972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		872DF3CE138625BD00CD0972 /* Build configuration list for PBXNativeTarget "FadeinTransition" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				872DF3CF138625BD00CD0972 /* Debug */,
+				872DF3D0138625BD00CD0972 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 872DF3A4138625BC00CD0972 /* Project object */;
+}
