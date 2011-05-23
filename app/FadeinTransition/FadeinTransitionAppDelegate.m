@@ -17,25 +17,35 @@
 @synthesize navigationController=_navigationController;
 @synthesize setupViewController=_setupViewController;
 
+// 独自のキーと値
 #define kSetupViewAnimationType @"setupViewAnimationType"
 #define kSetupViewAnimationTypeFadeIn @"setupViewAnimationTypeFadeIn"
 
 - (void) firedStart:(id)sender 
 {
-    CGFloat scale = [UIScreen mainScreen].scale;
+    CGFloat scale = [[UIScreen mainScreen] respondsToSelector:NSSelectorFromString(@"scale")] ? [UIScreen mainScreen].scale : 1.0f;
+        // スケールを判別
     CGRect bounds = [UIScreen mainScreen].bounds;
-    
     
     CGRect rectDrawArea = bounds;
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(rectDrawArea.size.width,rectDrawArea.size.height) , NO , scale );
+        // 画面サイズの描画領域を確保する
     
     [self.setupViewController.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage* screenImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    self.setupViewController = nil;
+       // 描画領域に対してsetupViewController のlayer の内容を描画する
     
-    // 現在のビューを置き換え
+    UIImage* screenImage = UIGraphicsGetImageFromCurrentImageContext();
+        // 作画した結果をUIImage として取得する
+        
+    UIGraphicsEndImageContext(); // 確保した領域を解放する
+    self.setupViewController = nil;
+        // setupViewController はこのさき必要ないので解放する
+    
+    // セットアップ中viewControllerをメインビューを置き換え
     self.window.rootViewController = self.navigationController;
+
+    // アニメーションを開始
+    // 開始画面からメイン画面へフェードインしながら切り替わるアニメーションを実現する
     
     [CATransaction begin];
     [CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
@@ -48,29 +58,30 @@
     layerFade_.opacity = 0.0f;
     [self.window.layer addSublayer:layerFade_];
     
-    CABasicAnimation* theAnimation = [[CABasicAnimation alloc] init];
+    CABasicAnimation* theAnimation = [[CABasicAnimation alloc] init]; // アニメーションのインスタンスを確保
     
-    theAnimation.duration = 1.0f;
-    theAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-    theAnimation.keyPath = @"opacity";
-    theAnimation.fromValue = [NSNumber numberWithFloat:1.0f];
-    theAnimation.toValue = [NSNumber numberWithFloat:0.0f];
-    [theAnimation setValue:kSetupViewAnimationTypeFadeIn forKey:kSetupViewAnimationType];
-    theAnimation.delegate = self;
-    [layerFade_ addAnimation:theAnimation forKey:@"fadeinAnimation"];
+    theAnimation.duration = 1.0f; // アニメーションの秒数を指定 [秒].[ミリ秒]
+    theAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]; // アニメーションタイミングを登録
+    theAnimation.keyPath = @"opacity"; // 不透過度
+    theAnimation.fromValue = [NSNumber numberWithFloat:1.0f]; // 開始1.0
+    theAnimation.toValue = [NSNumber numberWithFloat:0.0f]; // 終了0.0
+    [theAnimation setValue:kSetupViewAnimationTypeFadeIn forKey:kSetupViewAnimationType]; // 独自のプロパティkSetupViewAnimationType に値kSetupViewAnimationTypeFadeIn を格納
+    theAnimation.delegate = self; // アニメーション終了後のdelegate を登録
+    [layerFade_ addAnimation:theAnimation forKey:@"fadeinAnimation"]; // キー名fadeinAnimation としてアニメーションを追加
     
-    [theAnimation release];
+    [theAnimation release]; // 追加が終わったアニメーションを削除
     
-    [CATransaction commit ];
+    [CATransaction commit ]; // CATransaction begin から始まったアニメーションをcommit する
 }
 
+// CAAnimation のdelegate メソッド
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     NSString* setupViewAnimationType = [anim valueForKey:kSetupViewAnimationType];
     
-	if( [setupViewAnimationType compare:kSetupViewAnimationTypeFadeIn] == NSOrderedSame ){
-        [layerFade_ removeFromSuperlayer];
-        [layerFade_ release];
+	if( setupViewAnimationType != nil && [setupViewAnimationType compare:kSetupViewAnimationTypeFadeIn] == NSOrderedSame ){
+        [layerFade_ removeFromSuperlayer]; // CALayer を親layer から削除
+        [layerFade_ release]; // CALalayer から削除
         layerFade_ = nil;
     }
 }
@@ -79,51 +90,38 @@
 {
     // Override point for customization after application launch.
      
-    self.window.rootViewController = self.setupViewController;
+    self.window.rootViewController = self.setupViewController; // セットアップ中に用意するviewController を用意する
     [self.window makeKeyAndVisible];
     
     [self performSelector:@selector(firedStart:) withObject:nil afterDelay:3.0f];
+        // 3秒待ち受ける、実際にはNSURLConnection などネットワークへのリクエストを行う
     
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
-    /*
-     Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-     Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-     */
+
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-     If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-     */
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    /*
-     Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-     */
+
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    /*
-     Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-     */
+
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    /*
-     Called when the application is about to terminate.
-     Save data if appropriate.
-     See also applicationDidEnterBackground:.
-     */
+
 }
 
 - (void)dealloc
